@@ -14,6 +14,10 @@ const signUpFormValidation = (formData) => {
             error[[field]] = `${field} not present`
         }
     })
+    if(name="" || email="" || password="" ){
+        alert("all field must be filled")
+    }
+        
     if(formData.name && (formData.name.length < 3 || formData.name.length > 20)){
         error['name'] = 'Name should be atleast 4 chars and less than 20 chars'
     }
